@@ -1,3 +1,5 @@
+import { useTimeoutFn } from '@vueuse/core'
+
 <template>
     <div
       ref="refElement"
