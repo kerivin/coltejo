@@ -4,12 +4,21 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
-    '@inspira-ui/plugins'
+    '@nuxt/fonts',
+    '@nuxtjs/i18n'
   ],
 
   routeRules: {
     '/': { prerender: true }
   },
 
-  compatibilityDate: '2024-12-02'
+  compatibilityDate: '2024-12-02',
+
+  i18n: {
+    locales: [
+      { code: 'en', language: 'en-US' },
+      { code: 'ru', language: 'ru-RU' }
+    ],
+    defaultLocale: 'en',
+  }
 })
