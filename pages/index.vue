@@ -1,4 +1,5 @@
 <template>
+    <p>Test</p>
     <div class="flex items-center justify-center">
       <GlareCard class="flex flex-col items-center justify-center">
         <NuxtImg src="https://tailwindcss.com/img/card-top.jpg" />
