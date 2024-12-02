@@ -8,6 +8,7 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
+    "@inspira-ui/plugins": "^0.0.1",
     "@nuxt/content": "^2.13.4",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "nuxt": "^3.14.1592"
