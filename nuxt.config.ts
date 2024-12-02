@@ -20,5 +20,9 @@ export default defineNuxtConfig({
       { code: 'ru', language: 'ru-RU' }
     ],
     defaultLocale: 'en',
+  },
+
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
   }
 })
