@@ -1,8 +1,11 @@
-export default defineNuxtConfig
-({
-  future: {
-    compatibilityVersion: 4,
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  devtools: { enabled: true },
+  modules: ['@nuxt/content'],
+
+  routeRules: {
+    '/': { prerender: true }
   },
-  modules: ['@nuxtjs/tailwindcss'],
-  ssr: true,
+
+  compatibilityDate: '2024-12-02'
 })
