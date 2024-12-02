@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
 import { setupInspiraUI } from "@inspira-ui/plugins";
 
-module.exports = {
+export default <Partial<Config>> {
   darkMode: "selector",
   safelist: ["dark"],
   prefix: "",
@@ -54,4 +54,4 @@ module.exports = {
   },
 
   plugins: [animate, setupInspiraUI],
-} satisfies Config;
+};

@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/fonts',
     '@nuxtjs/i18n',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@vueuse/motion/nuxt'
   ],
 
   routeRules: {
