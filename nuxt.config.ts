@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
     '@nuxt/fonts',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    '@nuxt/image'
   ],
 
   routeRules: {
