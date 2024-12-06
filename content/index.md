@@ -3,6 +3,6 @@ rows: 3
 columns: 3
 ---
 
-::card
-Test
+::card{:class="w-96 h-60"}
+Test Test Test
 ::
