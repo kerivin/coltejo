@@ -9,6 +9,12 @@ export default <Partial<Config>> {
   theme: {
     extend: {
       colors: {
+        beige: '#c9bca8',
+        brown: '#3A3224',
+        green: '#6b8e50',
+        red: '#a83939',
+
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -49,6 +55,10 @@ export default <Partial<Config>> {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        'pica': ['"Pica"', 'serif'],
+        'pica-sc': ['"Pica SC"', 'serif'],
+      }
     },
   },
 

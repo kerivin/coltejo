@@ -47,7 +47,7 @@ const state = ref({
 });
 
 function handlePointerMove(event: PointerEvent) {
-  const rotateFactor = 0.4;
+  const rotateFactor = 3.;
   const rect = refElement.value?.getBoundingClientRect();
   if (rect) {
     const position = {
