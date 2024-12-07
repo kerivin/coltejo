@@ -65,14 +65,14 @@ function handlePointerLeave() {
 
 <template>
   <div ref="refElement"
-    class="container-style w-72 h-44 drop-shadow-lg duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] container relative isolate transition-transform will-change-transform [contain:layout_style] [perspective:600px]"
+    class="container-style w-56 h-36 drop-shadow-lg duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] container relative isolate transition-transform will-change-transform [contain:layout_style] [perspective:600px]"
     @pointermove="handlePointerMove" @pointerenter="handlePointerEnter" @pointerleave="handlePointerLeave">
     <div
       class="bg-green rounded-lg duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] grid h-full origin-center overflow-hidden transition-transform will-change-transform [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] hover:filter-none hover:[--duration:200ms] hover:[--easing:linear] hover:[--opacity:0.3]">
-      <div class="text-black text-justify [clip-path:inset(0_0_0_0_round_var(--radius))] [grid-area:1/1]">
+      <div class="card-content [clip-path:inset(0_0_0_0_round_var(--radius))] [grid-area:1/1]">
         <div class="grid grid-cols-3 items-center h-full mx-5 gap-6">
           <div class="col-span-1">
-            <NuxtImg :src="image" class="min-w-20 h-20"/>
+            <NuxtImg :src="image" class="min-w-14 h-14"/>
           </div>
           <div class="col-span-2 ml-2">
             <ContentSlot :use="$slots.default" />
