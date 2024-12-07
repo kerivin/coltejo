@@ -1,7 +1,8 @@
 <template>
   <main>
-    <div class="grid auto-cols-max justify-center items-center h-screen">
+    <div class="flex justify-center items-center h-screen">
       <ContentDoc />
+      <h1 class="text-4xl absolute top-5">Coltejo</h1>
     </div>
   </main>
 </template>

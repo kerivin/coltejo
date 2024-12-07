@@ -4,12 +4,10 @@
 
 interface CardProps {
   image: string;
-  rotateFactor: number;
 }
 
 const props = withDefaults(defineProps<CardProps>(), {
   image: "",
-  rotateFactor: 0.4,
 });
 
 const isPointerInside = ref(false);
@@ -22,7 +20,7 @@ const state = ref({
 });
 
 function handlePointerMove(event: PointerEvent) {
-  const rotateFactor = props.rotateFactor;
+  const rotateFactor = 0.4;
   const rect = refElement.value?.getBoundingClientRect();
   if (rect) {
     const position = {
@@ -67,16 +65,16 @@ function handlePointerLeave() {
 
 <template>
   <div ref="refElement"
-    class="container-style w-96 h-52 m-4 duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] container relative isolate transition-transform will-change-transform [aspect-ratio:17/21] [contain:layout_style] [perspective:600px]"
+    class="container-style w-72 h-44 drop-shadow-lg duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] container relative isolate transition-transform will-change-transform [contain:layout_style] [perspective:600px]"
     @pointermove="handlePointerMove" @pointerenter="handlePointerEnter" @pointerleave="handlePointerLeave">
     <div
-      class="bg-beige rounded-lg shadow-lg duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] grid h-full origin-center overflow-hidden transition-transform will-change-transform [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] hover:filter-none hover:[--duration:200ms] hover:[--easing:linear] hover:[--opacity:0.3]">
-      <div class="text-slate-800 [clip-path:inset(0_0_0_0_round_var(--radius))] [grid-area:1/1]">
-        <div class="size-full grid grid-cols-10 items-center justify-around p-8">
-          <div class="col-span-4">
-            <NuxtImg :src="image" class="origin-center w-20 h-20 min-w-20"/>
+      class="bg-green rounded-lg duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] grid h-full origin-center overflow-hidden transition-transform will-change-transform [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] hover:filter-none hover:[--duration:200ms] hover:[--easing:linear] hover:[--opacity:0.3]">
+      <div class="text-black text-justify [clip-path:inset(0_0_0_0_round_var(--radius))] [grid-area:1/1]">
+        <div class="grid grid-cols-3  items-center h-full mx-5 gap-6">
+          <div class="col-span-1">
+            <NuxtImg :src="image" class="min-w-20 h-20"/>
           </div>
-          <div class="col-span-6">
+          <div class="col-span-2 ml-2">
             <ContentSlot :use="$slots.default" />
           </div>
         </div>
@@ -99,7 +97,7 @@ function handlePointerLeave() {
   --bg-y: v-bind(state.background.y + "%");
   --duration: 300ms;
   --foil-size: 100%;
-  --opacity: 0;
+  --opacity: 0.15;
   --radius: 18px;
   --easing: ease;
   --transition: var(--duration) var(--easing);
@@ -129,7 +127,7 @@ function handlePointerLeave() {
       #0e152e 10%,
       #0e152e 12%
     )
-    var(--bg-x) var(--bg-y) / 300% no-repeat;
+    var(--bg-x) var(--bg-y) / 3000% no-repeat;
   --shade: radial-gradient(
       farthest-corner circle at var(--m-x) var(--m-y),
       rgba(255, 255, 255, 0.1) 12%,

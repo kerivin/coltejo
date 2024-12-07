@@ -91,7 +91,11 @@
     :last-child {
       font-family: 'Pica SC';
       font-size: larger;
-      padding-left: 20px;
+      text-align: end;
     }
+  }
+
+  h1, h2, h3 {
+    font-family: 'Pica SC';
   }
 }
