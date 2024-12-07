@@ -2,13 +2,13 @@
 
 <script setup lang="ts">
 
-import { cn } from "~/lib/utils";
-
 interface CardProps {
+  image: string;
   rotateFactor: number;
 }
 
 const props = withDefaults(defineProps<CardProps>(), {
+  image: "",
   rotateFactor: 0.4,
 });
 
@@ -67,12 +67,19 @@ function handlePointerLeave() {
 
 <template>
   <div ref="refElement"
-    class="container-style w-96 h-52 duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] container relative isolate transition-transform will-change-transform [aspect-ratio:17/21] [contain:layout_style] [perspective:600px]"
+    class="container-style w-96 h-52 m-4 duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] container relative isolate transition-transform will-change-transform [aspect-ratio:17/21] [contain:layout_style] [perspective:600px]"
     @pointermove="handlePointerMove" @pointerenter="handlePointerEnter" @pointerleave="handlePointerLeave">
     <div
       class="bg-beige rounded-lg shadow-lg duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] grid h-full origin-center overflow-hidden transition-transform will-change-transform [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] hover:filter-none hover:[--duration:200ms] hover:[--easing:linear] hover:[--opacity:0.3]">
-      <div class="flex flex-col justify-center p-8 text-slate-800 [clip-path:inset(0_0_0_0_round_var(--radius))] [grid-area:1/1]">
-        <ContentSlot />
+      <div class="text-slate-800 [clip-path:inset(0_0_0_0_round_var(--radius))] [grid-area:1/1]">
+        <div class="size-full grid grid-cols-10 items-center justify-around p-8">
+          <div class="col-span-4">
+            <NuxtImg :src="image" class="origin-center w-20 h-20 min-w-20"/>
+          </div>
+          <div class="col-span-6">
+            <ContentSlot :use="$slots.default" />
+          </div>
+        </div>
       </div>
       <div
         class="transition-background duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-background grid size-full opacity-[var(--opacity)] mix-blend-soft-light transition-opacity [background:radial-gradient(farthest-corner_circle_at_var(--m-x)_var(--m-y),_rgba(255,255,255,0.8)_10%,_rgba(255,255,255,0.65)_20%,_rgba(255,255,255,0)_90%)] [clip-path:inset(0_0_1px_0_round_var(--radius))] [grid-area:1/1]" />

@@ -90,6 +90,8 @@
   blockquote {
     :last-child {
       font-family: 'Pica SC';
+      font-size: larger;
+      padding-left: 20px;
     }
   }
 }

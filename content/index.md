@@ -1,16 +1,10 @@
----
-rows: 3
-columns: 3
-image: ""
----
-
-::card
-> "The only limit to our realization of tomorrow is our doubts of today."
+::card{:image="/images/empty.png"}
+>"I have never been that scared in my entire life, when I left the police station."
 >
->               — Franklin D. Roosevelt
+>— Noname
 ::
 
-::card
+::card{:image="/images/empty.png"}
 Test Test Test Second
 
 Test Test Test 2
