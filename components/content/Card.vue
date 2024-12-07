@@ -46,11 +46,11 @@ function handlePointerMove(event: PointerEvent) {
 
 function handlePointerEnter() {
   isPointerInside.value = true;
-  useTimeoutFn(() => {
-    if (isPointerInside.value && refElement.value) {
-      refElement.value.style.setProperty("--duration", "0s");
-    }
-  }, 300);
+  // useTimeoutFn(() => {
+  //   if (isPointerInside.value && refElement.value) {
+  //     refElement.value.style.setProperty("--duration", "0s");
+  //   }
+  // }, 300);
 }
 
 function handlePointerLeave() {
@@ -70,7 +70,7 @@ function handlePointerLeave() {
     <div
       class="bg-green rounded-lg duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] grid h-full origin-center overflow-hidden transition-transform will-change-transform [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] hover:filter-none hover:[--duration:200ms] hover:[--easing:linear] hover:[--opacity:0.3]">
       <div class="text-black text-justify [clip-path:inset(0_0_0_0_round_var(--radius))] [grid-area:1/1]">
-        <div class="grid grid-cols-3  items-center h-full mx-5 gap-6">
+        <div class="grid grid-cols-3 items-center h-full mx-5 gap-6">
           <div class="col-span-1">
             <NuxtImg :src="image" class="min-w-20 h-20"/>
           </div>
@@ -97,7 +97,7 @@ function handlePointerLeave() {
   --bg-y: v-bind(state.background.y + "%");
   --duration: 300ms;
   --foil-size: 100%;
-  --opacity: 0.15;
+  --opacity: 0.05;
   --radius: 18px;
   --easing: ease;
   --transition: var(--duration) var(--easing);
