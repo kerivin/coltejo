@@ -89,6 +89,7 @@
 
   blockquote {
     :last-child {
+      margin-top: 0.4rem;
       font-family: 'Pica SC';
       font-size: larger;
       text-align: end;
@@ -102,8 +103,8 @@
   .card-content {
     text-align: justify;
     mix-blend-mode: multiply;
-    font-size: smaller;
+    font-size: small;
     color: black;
-    line-height: 0.75rem;
+    line-height: 1rem;
   }
 }
