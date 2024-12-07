@@ -13,7 +13,7 @@
 :::
 
 :::card{:image="/images/empty.png"}
->"The street was absolutely empty, and I'm sure Marshall wasn't even there that night. There was no light in the police station."
+>"The street was absolutely empty, and I'm sure Marshall wasn't even there that night. Lights were off."
 >
 >— Quinn
 :::
