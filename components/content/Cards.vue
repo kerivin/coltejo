@@ -39,7 +39,7 @@ const grid = computed<string>(() => {
       str += " lg:grid-cols-11";
       break;
     case 12:
-      str += " lg:grid-cols-11";
+      str += " lg:grid-cols-12";
       break;
   }
   console.log(str);
